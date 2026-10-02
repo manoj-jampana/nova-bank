@@ -25,7 +25,7 @@ CREATE DATABASE banking_db;
 No tables need to be created manually; Hibernate creates/updates them.
 
 ## 2. Configure MySQL password
-Edit `src/main/resources/application.properties` and replace `YOUR_MYSQL_PASSWORD` with your MySQL root password.
+Edit `backend/src/main/resources/application.properties` and replace `YOUR_MYSQL_PASSWORD` with your MySQL root password.
 
 ## 3. Run
 ```bash
