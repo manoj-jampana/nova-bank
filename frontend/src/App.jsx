@@ -34,7 +34,7 @@ function AdminDashboard({ user, logout }) {
       setError("");
 
       const response = await fetch(
-          "http://localhost:8080/api/auth/users"
+          "https://nova-bank-backend-6kj6.onrender.com/api/auth/users"
       );
 
       if (!response.ok) {
@@ -70,7 +70,7 @@ function AdminDashboard({ user, logout }) {
       setError("");
 
       const response = await fetch(
-          "http://localhost:8080/api/accounts"
+          "https://nova-bank-backend-6kj6.onrender.com/api/accounts"
       );
 
       if (!response.ok) {
@@ -123,7 +123,7 @@ function AdminDashboard({ user, logout }) {
       if (currentAccounts.length === 0) {
 
         const accountsResponse = await fetch(
-            "http://localhost:8080/api/accounts"
+            "https://nova-bank-backend-6kj6.onrender.com/api/accounts"
         );
 
         if (!accountsResponse.ok) {
@@ -149,7 +149,7 @@ function AdminDashboard({ user, logout }) {
             try {
 
               const response = await fetch(
-                  `http://localhost:8080/api/accounts/${account.accountNumber}/transactions`
+                  `https://nova-bank-backend-6kj6.onrender.com/api/accounts/${account.accountNumber}/transactions`
               );
 
               if (!response.ok) {
@@ -205,7 +205,7 @@ function AdminDashboard({ user, logout }) {
        */
 
       const usersResponse = await fetch(
-          "http://localhost:8080/api/auth/users"
+          "https://nova-bank-backend-6kj6.onrender.com/api/auth/users"
       );
 
       if (!usersResponse.ok) {
@@ -224,7 +224,7 @@ function AdminDashboard({ user, logout }) {
        */
 
       const accountsResponse = await fetch(
-          "http://localhost:8080/api/accounts"
+          "https://nova-bank-backend-6kj6.onrender.com/api/accounts"
       );
 
       if (!accountsResponse.ok) {
@@ -262,7 +262,7 @@ function AdminDashboard({ user, logout }) {
             try {
 
               const response = await fetch(
-                  `http://localhost:8080/api/accounts/${account.accountNumber}/transactions`
+                  `https://nova-bank-backend-6kj6.onrender.com/api/accounts/${account.accountNumber}/transactions`
               );
 
               if (!response.ok) {
@@ -1136,7 +1136,7 @@ function UserDashboard({ user, logout }) {
       setError("");
 
       const response = await fetch(
-          "http://localhost:8080/api/accounts"
+          "https://nova-bank-backend-6kj6.onrender.com/api/accounts"
       );
 
       if (!response.ok) {
@@ -1203,7 +1203,7 @@ function UserDashboard({ user, logout }) {
       setError("");
 
       const response = await fetch(
-          `http://localhost:8080/api/accounts/${account.accountNumber}/transactions`
+          `https://nova-bank-backend-6kj6.onrender.com/api/accounts/${account.accountNumber}/transactions`
       );
 
       if (!response.ok) {
@@ -1268,7 +1268,7 @@ function UserDashboard({ user, logout }) {
       setMessage("");
 
       const response = await fetch(
-          `http://localhost:8080/api/accounts/${account.accountNumber}/deposit`,
+          `https://nova-bank-backend-6kj6.onrender.com/api/accounts/${account.accountNumber}/deposit`,
           {
             method: "POST",
 
@@ -1347,7 +1347,7 @@ function UserDashboard({ user, logout }) {
       setMessage("");
 
       const response = await fetch(
-          `http://localhost:8080/api/accounts/${account.accountNumber}/withdraw`,
+          `https://nova-bank-backend-6kj6.onrender.com/api/accounts/${account.accountNumber}/withdraw`,
           {
             method: "POST",
 
@@ -1449,7 +1449,7 @@ function UserDashboard({ user, logout }) {
 
 
       const response = await fetch(
-          "http://localhost:8080/api/transfers",
+          "https://nova-bank-backend-6kj6.onrender.com/api/transfers",
           {
             method: "POST",
 
@@ -2469,7 +2469,7 @@ function Login({ onLogin }) {
       setLoading(true);
 
       const response = await fetch(
-          "http://localhost:8080/api/auth/login",
+          "https://nova-bank-backend-6kj6.onrender.com/api/auth/login",
           {
             method: "POST",
 

@@ -5,7 +5,7 @@ Professional React frontend for the existing Spring Boot Banking API.
 ## Requirements
 
 - Node.js 18+ (Node 20+ recommended)
-- Existing Spring Boot backend running on `http://localhost:8080`
+- Existing Spring Boot backend running on `https://nova-bank-backend-6kj6.onrender.com`
 
 ## Run
 

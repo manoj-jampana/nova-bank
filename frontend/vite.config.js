@@ -7,7 +7,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       "/api": {
-        target: "http://localhost:8080",
+        target: "https://nova-bank-backend-6kj6.onrender.com",
         changeOrigin: true
       }
     }
