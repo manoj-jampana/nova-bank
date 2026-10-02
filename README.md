@@ -1,62 +1,105 @@
-# Banking App — Spring Boot + MySQL
+# NovaBank - Full Stack Banking Application
 
-A complete beginner-friendly banking backend with a small browser UI.
+NovaBank is a full-stack banking application built using React, Spring Boot, and MySQL.
+
+The project has a separate React frontend and Spring Boot backend. The application supports user authentication, banking operations, transaction history, and an admin dashboard.
+
+## Live Application
+
+🌐 **NovaBank:**  
+https://nova-bank-8hcblmkg1-manoj-jampana.vercel.app
+
+## Backend
+
+The Spring Boot backend is deployed on Render.
+
+🔗 **Backend:**  
+https://nova-bank-backend-6kj6.onrender.com
 
 ## Features
-- Create bank accounts with an automatically generated 10-digit account number
-- Store accounts in MySQL using Spring Data JPA/Hibernate
+
+### User Features
+
+- User login
+- Create bank accounts
+- Automatically generated 10-digit account numbers
 - Deposit money
-- Withdraw money with insufficient-balance validation
-- Transfer money between two accounts
-- Transaction history
-- Close an account only when its balance is zero
+- Withdraw money
+- Transfer money between accounts
+- View account details
+- View transaction history
+- Close an account when the balance is zero
+
+### Admin Features
+
+- Admin login
+- Admin dashboard
+- View users
+- View accounts
+- View transactions
+
+### Backend Features
+
 - REST APIs
-- Simple HTML/JavaScript frontend served by Spring Boot
-- Global error handling and request validation
+- Spring Data JPA
+- Hibernate
+- MySQL
+- Request validation
+- Global exception handling
+- Transaction management
 
-## Technologies
-Java 17, Spring Boot 4.1, Spring Web, Spring Data JPA, Hibernate, MySQL, Maven, HTML/CSS/JavaScript.
+## Technologies Used
 
-## 1. Create the database
-Open MySQL:
-```sql
-CREATE DATABASE banking_db;
-```
-No tables need to be created manually; Hibernate creates/updates them.
+### Frontend
 
-## 2. Configure MySQL password
-Edit `backend/src/main/resources/application.properties` and replace `YOUR_MYSQL_PASSWORD` with your MySQL root password.
+- React
+- Vite
+- JavaScript
+- HTML
+- CSS
 
-## 3. Run
-```bash
-mvn spring-boot:run
-```
-Or on Windows:
-```bat
-mvnw.cmd spring-boot:run
-```
+### Backend
 
-Open `http://localhost:8080/` for the UI.
+- Java 17
+- Spring Boot
+- Spring Web
+- Spring Data JPA
+- Hibernate
+- Maven
 
-## REST API
-- `POST /api/accounts`
-- `GET /api/accounts`
-- `GET /api/accounts/{accountNumber}`
-- `POST /api/accounts/{accountNumber}/deposit`
-- `POST /api/accounts/{accountNumber}/withdraw`
-- `POST /api/transfers`
-- `GET /api/accounts/{accountNumber}/transactions`
-- `DELETE /api/accounts/{accountNumber}`
+### Database
 
-### Create account JSON
-```json
-{"holderName":"Manoj Kumar","email":"manoj@example.com","initialDeposit":5000}
-```
-### Deposit/withdraw JSON
-```json
-{"amount":1000}
-```
-### Transfer JSON
-```json
-{"fromAccount":"1000000001","toAccount":"1000000002","amount":500}
-```
+- MySQL
+- Aiven MySQL
+
+### Deployment
+
+- Vercel - Frontend
+- Render - Backend
+- Aiven - Database
+
+## Project Structure
+
+```text
+nova-bank/
+│
+├── backend/
+│   ├── .mvn/
+│   ├── src/
+│   ├── Dockerfile
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   └── pom.xml
+│
+├── frontend/
+│   ├── src/
+│   ├── README.md
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   └── vite.config.js
+│
+├── .gitattributes
+├── .gitignore
+├── README.md
+└── login-test.http

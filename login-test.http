@@ -1,1 +1,1 @@
-GET http://localhost:8080/api/accounts
+GET https://nova-bank-backend-6kj6.onrender.com/api/accounts
